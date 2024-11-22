@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZCDS_OCORRENCIAS_CDS" xml:lang="pt" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZCDS_OCORRENCIASType" sap:label="CDS View para Ocorrencias Multidados" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Numero"/>
+                </Key>
+                <Property Name="Numero" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Campo de caracteres do comprimento 10" sap:heading=""/>
+                <Property Name="SlaDiff" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Campo de caracteres do comprimento 10" sap:heading=""/>
+                <Property Name="OperadorResponsavel" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="Idcliente" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="ClienteNome" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="Slm" Type="Edm.String" MaxLength="50" sap:display-format="UpperCase" sap:label="SLM"/>
+                <Property Name="IdDivisao" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="Area" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="Modulo" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Campo de caracteres do comprimento 10" sap:heading=""/>
+                <Property Name="TempoRespostaSla" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="OcoStatusSimples" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="SlaSolucao" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="SolucaoDentroSlaPorc" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="DataAbertura" Type="Edm.String" MaxLength="10"/>
+                <Property Name="HoraAbertura" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Campo de caracteres do comprimento 10" sap:heading=""/>
+                <Property Name="UltimaModificacaoStatus" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="DataFechamento" Type="Edm.String" MaxLength="10"/>
+                <Property Name="NomeMacroDivisaoAtual" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="NomeGrupoDivisaoAtual" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="NomeDivisaoOriginal" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="StatusCodigo" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="NomeStatusFluxo" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="PrioridadeDesc" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="char20" sap:quickinfo="Char 20"/>
+                <Property Name="UrgenciaDesc" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="char20" sap:quickinfo="Char 20"/>
+                <Property Name="AbertoPor" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+                <Property Name="UltimaNarrativaLimit" Type="Edm.String" sap:display-format="UpperCase" sap:label="Narrativa" sap:quickinfo="Elemento de dados para descrição da narrativa chamado"/>
+                <Property Name="UltimaNarrativaLimit2" Type="Edm.String" sap:display-format="UpperCase" sap:label="Narrativa" sap:quickinfo="Elemento de dados para descrição da narrativa chamado"/>
+                <Property Name="UltimaNarrativaLimit3" Type="Edm.String" sap:display-format="UpperCase" sap:label="Narrativa" sap:quickinfo="Elemento de dados para descrição da narrativa chamado"/>
+                <Property Name="PenultimaNarrativa" Type="Edm.String" sap:display-format="UpperCase" sap:label="Narrativa" sap:quickinfo="Elemento de dados para descrição da narrativa chamado"/>
+                <Property Name="PenultimaNarrativa2" Type="Edm.String" sap:display-format="UpperCase" sap:label="Narrativa" sap:quickinfo="Elemento de dados para descrição da narrativa chamado"/>
+                <Property Name="PenultimaNarrativa3" Type="Edm.String" sap:display-format="UpperCase" sap:label="Narrativa" sap:quickinfo="Elemento de dados para descrição da narrativa chamado"/>
+                <Property Name="Idcamposvariaveis781" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Código de um caractere" sap:heading=""/>
+                <Property Name="Idcamposvariaveis777" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="char20" sap:quickinfo="Char 20"/>
+                <Property Name="HorasLancadas" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="char20" sap:quickinfo="Char 20"/>
+                <Property Name="Contador" Type="Edm.String" MaxLength="5" sap:display-format="NonNegative" sap:label="Contador" sap:quickinfo="Multidados: Elemento de dados para Contator"/>
+                <Property Name="HorasEstimadas" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Campo de caracteres do comprimento 10" sap:heading=""/>
+                <Property Name="HorasMes" Type="Edm.Int32" sap:label="Horas Mês" sap:quickinfo="Elemento de dados para hora mês"/>
+                <Property Name="HorasDebCred" Type="Edm.Int32" sap:label="Horas Deb/Cred" sap:quickinfo="Elemento de dados para horas credito e debito"/>
+                <Property Name="Idcamposvariaveis727" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="char20" sap:quickinfo="Char 20"/>
+                <Property Name="Cobranca" Type="Edm.Int32" sap:label="INT4" sap:quickinfo="Nº inteiro com sinal 4 bytes"/>
+                <Property Name="Idcamposvariaveis718" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="Caractere 100" sap:heading=""/>
+                <Property Name="Idcamposvariaveis_713" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="char20" sap:quickinfo="Char 20"/>
+                <Property Name="Slabi" Type="Edm.String" MaxLength="50" sap:label="Comentário" sap:heading=""/>
+            </EntityType>
+            <EntityContainer Name="ZCDS_OCORRENCIAS_CDS_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZCDS_OCORRENCIAS" EntityType="ZCDS_OCORRENCIAS_CDS.ZCDS_OCORRENCIASType" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotations Target="ZCDS_OCORRENCIAS_CDS.ZCDS_OCORRENCIAS_CDS_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="Aggregation.ApplySupported">
+                    <Record>
+                        <PropertyValue Property="Transformations">
+                            <Collection>
+                                <String>aggregate</String>
+                                <String>groupby</String>
+                                <String>filter</String>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Rollup" EnumMember="None"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZCDS_OCORRENCIAS_CDS.ZCDS_OCORRENCIAS_CDS_Entities/ZCDS_OCORRENCIAS" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="UltimaNarrativaLimit"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="UltimaNarrativaLimit2"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="UltimaNarrativaLimit3"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="PenultimaNarrativa"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="PenultimaNarrativa2"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="PenultimaNarrativa3"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>UltimaNarrativaLimit</PropertyPath>
+                                <PropertyPath>UltimaNarrativaLimit2</PropertyPath>
+                                <PropertyPath>UltimaNarrativaLimit3</PropertyPath>
+                                <PropertyPath>PenultimaNarrativa</PropertyPath>
+                                <PropertyPath>PenultimaNarrativa2</PropertyPath>
+                                <PropertyPath>PenultimaNarrativa3</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="http://177.85.33.150:8000/sap/opu/odata/sap/ZCDS_OCORRENCIAS_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://177.85.33.150:8000/sap/opu/odata/sap/ZCDS_OCORRENCIAS_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
